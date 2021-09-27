@@ -1,9 +1,14 @@
 package com.example.machingapp
 
+import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.View
+import android.widget.ImageView
+import com.example.machingapp.authorization.IntroActivity
 import com.example.machingapp.slider.CardStackAdapter
+import com.google.firebase.auth.ktx.auth
+import com.google.firebase.ktx.Firebase
 import com.yuyakaido.android.cardstackview.CardStackLayoutManager
 import com.yuyakaido.android.cardstackview.CardStackListener
 import com.yuyakaido.android.cardstackview.CardStackView
@@ -18,6 +23,12 @@ class MainActivity : AppCompatActivity() {
         setContentView(R.layout.activity_main)
 
         val cardStackView = findViewById<CardStackView>(R.id.cardStackView)
+        val log_out_btn = findViewById<ImageView>(R.id.log_out)
+        log_out_btn.setOnClickListener {
+            val auth = Firebase.auth
+            auth.signOut()
+            startActivity(Intent(this, IntroActivity::class.java ))
+        }
 
         layoutManager = CardStackLayoutManager(
             baseContext,
