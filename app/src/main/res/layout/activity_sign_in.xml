@@ -29,6 +29,18 @@
             <com.google.android.material.textfield.TextInputEditText
                 android:id="@+id/sign_in_pwd"
                 android:hint="PASS WORD"
+
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"/>
+
+        </com.google.android.material.textfield.TextInputLayout>
+        <com.google.android.material.textfield.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:counterEnabled="true">
+            <com.google.android.material.textfield.TextInputEditText
+                android:hint="PASS WORD : RE"
+                android:id="@+id/sign_in_pwd_re"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"/>
 
@@ -39,11 +51,32 @@
             app:counterEnabled="true"
             app:counterMaxLength="10">
             <com.google.android.material.textfield.TextInputEditText
-                android:hint="PASS WORD : RE"
+                android:hint="NICK NAME"
+                android:id="@+id/sign_in_nn"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"/>
 
         </com.google.android.material.textfield.TextInputLayout>
+        <RadioGroup
+            android:id="@+id/sex_radio"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <com.google.android.material.radiobutton.MaterialRadioButton
+                android:id="@+id/man"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:text="Man"/>
+            <com.google.android.material.radiobutton.MaterialRadioButton
+                android:id="@+id/woman"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:text="Woman"/>
+            <com.google.android.material.radiobutton.MaterialRadioButton
+                android:id="@+id/others"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:text="Others"/>
+        </RadioGroup>
     <Button
         android:id="@+id/sign_in_btn"
         android:text="SIGN IN"
