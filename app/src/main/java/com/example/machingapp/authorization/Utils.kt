@@ -8,7 +8,7 @@ class Utils {
     companion object{
         val auth = FirebaseAuth.getInstance()
         val database = Firebase.database
-        val userInfoRef = database.getReference("UserInfo")
+        val userInfoRef = database.getReference("UserInfo ")
         fun getUid() : String{
             val user : String = auth.currentUser?.uid.toString()
             return user

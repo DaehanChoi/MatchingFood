@@ -29,11 +29,12 @@ class MainActivity : AppCompatActivity() {
         setContentView(R.layout.activity_main)
 
         val cardStackView = findViewById<CardStackView>(R.id.cardStackView)
-        val log_out_btn = findViewById<ImageView>(R.id.log_out)
-        log_out_btn.setOnClickListener {
-            val auth = Firebase.auth
-            auth.signOut()
-            startActivity(Intent(this, IntroActivity::class.java ))
+        val mypage_btn = findViewById<ImageView>(R.id.log_out)
+        mypage_btn.setOnClickListener {
+
+            val intent = Intent(this, MyPageActivity::class.java)
+            startActivity(intent)
+
         }
 
         layoutManager = CardStackLayoutManager(
